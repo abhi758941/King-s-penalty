@@ -10787,7 +10787,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1058070313}
-  - component: {fileID: 1058070312}
+  - component: {fileID: 1058070314}
   m_Layer: 0
   m_Name: Obstacle Spawner
   m_TagString: Untagged
@@ -10795,30 +10795,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1058070312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1058070311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36006154623367d49852e71a4a94b78d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obstacelPrefabs:
-  - {fileID: 1353453106609938309, guid: 148a89a5be9c8b745aa27482a4f12f2e, type: 3}
-  - {fileID: 3088828840936204051, guid: e409ca146d6adaf469bb5344aad77f0a, type: 3}
-  - {fileID: 1690564814541804375, guid: ce03d7917c80819479cd450a6fcbd950, type: 3}
-  - {fileID: 3880452190302430942, guid: 8eb84eb0dc270e744b5be6eeacd0729e, type: 3}
-  - {fileID: 3011161051322518586, guid: 50edfa426b57afc499d6e7896d4f4aba, type: 3}
-  - {fileID: 4761365610044643218, guid: fbe8d1bd3b2348148a192b41d3266293, type: 3}
-  - {fileID: 7433712073173139287, guid: 743e185a0afc26747b4fc832df286b37, type: 3}
-  obstacleSpawnTime: 3
-  obstacleParent: {fileID: 953332708}
-  spawnWidth: 4
-  minimumObstacleSpawnTime: 0.5
 --- !u!4 &1058070313
 Transform:
   m_ObjectHideFlags: 0
@@ -10834,6 +10810,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1058070314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058070311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26f09f2217c49c84e98366ec66eb90d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacelPrefabs:
+  - {fileID: 3088828840936204051, guid: e409ca146d6adaf469bb5344aad77f0a, type: 3}
+  - {fileID: 1690564814541804375, guid: ce03d7917c80819479cd450a6fcbd950, type: 3}
+  - {fileID: 3880452190302430942, guid: 8eb84eb0dc270e744b5be6eeacd0729e, type: 3}
+  - {fileID: 3011161051322518586, guid: 50edfa426b57afc499d6e7896d4f4aba, type: 3}
+  - {fileID: 4761365610044643218, guid: fbe8d1bd3b2348148a192b41d3266293, type: 3}
+  - {fileID: 7433712073173139287, guid: 743e185a0afc26747b4fc832df286b37, type: 3}
+  - {fileID: 1353453106609938309, guid: 148a89a5be9c8b745aa27482a4f12f2e, type: 3}
+  obstacleSpawnTime: 2
+  obstacleParent: {fileID: 0}
+  spawnWidth: 0
+  minimumObstacleSpawnTime: 0.5
 --- !u!1 &1112719827
 GameObject:
   m_ObjectHideFlags: 0
@@ -15917,7 +15917,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5547541ac919e864ca207e010d0b0b76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 8
+  movementSpeed: 7
   clampX: 4
   clampZ: 1
 --- !u!54 &1283145445
@@ -15983,8 +15983,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 296866733}
-  collisionCooldown: 1
-  adjustMoveSpeedAmmount: -2
+  collisionCooldown: -2
+  adjustMoveSpeedAmmount: 0.08
 --- !u!1 &1285339088
 GameObject:
   m_ObjectHideFlags: 0
@@ -16598,7 +16598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedUpParticleSystem: {fileID: 96452320}
-  minFOV: 25
+  minFOV: 60
   maxFOV: 120
   zoomDuration: 1
   zoomSpeedModifier: 5
@@ -16737,13 +16737,13 @@ MonoBehaviour:
   - {fileID: 41883188629437784, guid: bc61657107af35a4a875634a1b7fa227, type: 3}
   - {fileID: 41883188629437784, guid: 7f6c7e484f646994b89e5db73a0c6404, type: 3}
   checkpointChunkPrefab: {fileID: 41883188629437784, guid: 810cfb5b9a944a14a8a77ac8698ef09c, type: 3}
-  StartingChunkAmmount: 12
+  StartingChunkAmmount: 8
   chunkParent: {fileID: 447380498}
   cameraController: {fileID: 1488061626}
   scoreManager: {fileID: 1406654561}
   chunkLength: 10
   moveSpeed: 8
-  minMoveSpeed: 2
+  minMoveSpeed: 8
   maxMoveSpeed: 20
   minGravityZ: -9.8
   checkpointInterval: 8

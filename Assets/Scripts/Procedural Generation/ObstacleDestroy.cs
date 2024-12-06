@@ -8,3 +8,4 @@ public class ObstacleDestroy : MonoBehaviour
         Destroy(other.gameObject);    
     }
 }
+
